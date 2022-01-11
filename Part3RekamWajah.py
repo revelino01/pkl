@@ -8,7 +8,7 @@ cam.set(4, 480) #mengubah tinggi camera
 WajahDir = 'WajahDatabase'
 faceDetector = cv2.CascadeClassifier('DeteksiWajah.xml')
 eyeDetector = cv2.CascadeClassifier('DeteksiMata.xml')
-faceID = input("Masukkan NIM, lalu tekan enter: ")
+faceID = input("Masukkan Nama, lalu tekan enter: ")
 print("Hadapkan muka ke kamera dan tunggu proses selesai")
 ambilData = 1
 
