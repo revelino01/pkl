@@ -11,9 +11,9 @@ def getImageLabel(path):
     faceIDs = []
     for imagePath in imagePaths:
         PILImg = Image.open(imagePath).convert('L') #convert gambar menjadi grayscale
-        imgNum = np.array(PILImg, 'vint8')
+        imgNum = np.array(PILImg, 'uint8')
         faceID = int(os.path.split(imagePath)[-1].split(".")[1])
-        faces = faceDetector.datectMultiScale(imgNum)
+        faces = faceDetector.detectMultiScale(imgNum)
         for(x, y, w, h) in faces:
             faceSamples.append(imgNum[y:y+h,x:x+w])
             faceIDs.append(faceID)
