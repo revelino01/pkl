@@ -27,6 +27,6 @@ faces,IDs = getImageLabel(WajahDir)
 faceRecognizer.train(faces,np.array(IDs))
 
 #save
-faceRecognizer.write(latihDir+'/trainer.xml')
+faceRecognizer.write(LatihDir+'/trainer.xml')
 print ('sebanyak {0} data wajah telah digunakan untuk training mesin',format(len(np.unique(IDs))))
 
