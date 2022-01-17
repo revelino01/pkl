@@ -18,8 +18,9 @@ while True:
     faces  = faceDetector.detectMultiScale(abuAbu, 1.3, 5) #frame,scaleFactor,minMaxBurst
     for(x, y, w, h) in faces:
         frame = cv2.rectangle(frame,(x,y),(x+w,y+h),(255,255,0),2)
-        namaFile = 'wajah.'+str(faceID)+'.'+str(ambilData)+'.jpg'
-        cv2.imwrite(WajahDir+'/'+namaFile, frame) ##hanya buat testing
+        namaFile = str(faceID)+'.jpg'
+        #namaFile = 'wajah.'+str(faceID)+'.'+str(ambilData)+'.jpg'
+        cv2.imwrite(WajahDir+'/'+namaFile, frame) #hanya buat testing
         ambilData += 1
         roiAbuAbu = abuAbu[y:y+h,x:x+w]
         roiWarna = frame[y:y+h,x:x+w]
@@ -31,7 +32,7 @@ while True:
     k = cv2.waitKey(1) & 0xFF
     if k == 27 or k == ord ('q'):
         break
-    elif ambilData>10:
+    elif ambilData>=1:
         break
 print ("Pengambilan data selesai")
 cam.release()
