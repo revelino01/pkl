@@ -3,6 +3,7 @@ import cv2
 import os
 import glob
 import numpy as np
+# from Sergio Canu, the founder of Pysource, https://pysource.com/2021/08/16/face-recognition-in-real-time-with-opencv-and-python/
 
 
 class SimpleFacerec:
