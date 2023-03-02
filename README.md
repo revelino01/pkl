@@ -5,3 +5,6 @@ Automated Presence Detection using Face Recognition.
 To be implemented on Raspberry Pi.
 
 ** python virtual env is included in this repo **
+
+with:
+https://github.com/ExVessel
